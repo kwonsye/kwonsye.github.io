@@ -4,7 +4,7 @@ highlighter:      rouge
 
 # Setup
 title:            Memory
-tagline:          'A Jekyll theme'
+#tagline:          'A Jekyll theme'
 description:      '공부한 것을 정리하기 위한 블로그입니다.'
 url:              https://fongandrew.github.io
 baseurl:          
