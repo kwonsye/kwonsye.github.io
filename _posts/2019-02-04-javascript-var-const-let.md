@@ -47,6 +47,7 @@ tags:
 ## const VS var, let
 --- 
 `const` 는 상수를 선언하는 키워드이다. 따라서 값의 재할당이 불가능하고, 선언과 동시에 값을 할당해주어야 한다. (=초기화 해 주어야 한다.)
+- 단 배열 or 객체일 경우 값의 변경이 가능하다
 
 ```
 const a = 'a'
@@ -55,6 +56,12 @@ a = 'b' //error
 
 const b //error
 b = 'b' //error
+
+const array = [1,2,3]
+array[0] = 4 //가능 array는 [4,2,3]으로 변경됨
+
+const object = {a:1, b:2, c:3}
+object.a = 4 //가능 object는 {a:4, b:2, c:3}으로 변경됨
 ```
 `var` 과 `let`은 변수를 선언하는 키워드이다. 따라서 값의 재할당이 가능하다. 물론 초기화를 안해줘도 된다.
 ```
