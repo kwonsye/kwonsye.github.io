@@ -38,7 +38,7 @@ MVC 패턴은 하나의 애플리케이션을 구성할 때, 그 구성요소를
 <br>
 먼저 전체적인 흐름을 정리한 다음에 Mode, View, Controller 각각을 설명할 것이다.
 
-<img src="">
+<img src="/assets/images/190305/mvc_2.JPG">
 
 **1.** user가 UI를 맡고 있는 View에서 화면에 표시된 내용을 변경하게 되면(ex Submit 버튼을 누른다.), Controller가 사용자의 행동을 받아서 사용자의 요청 명령에 응답한다.
 <br>
@@ -56,7 +56,7 @@ MVC 패턴은 하나의 애플리케이션을 구성할 때, 그 구성요소를
 ## Model
 ---
 - 데이터를 가지고 있는 객체이며 모든 데이터와 상태에 대한 정보와 데이터 처리 관련 로직을 가지고 있다.
-- View와 Controller에서 Model의 상태를 조작하거나 가져오기 위한 인터페이스를 제공한다.
+- Controller에서 Model의 상태를 조작하거나 가져오기 위한 인터페이스를 제공한다.
 
 기본적으로 View나 Controller에 대해서 관심이 없다.
 
@@ -64,9 +64,9 @@ MVC 패턴은 하나의 애플리케이션을 구성할 때, 그 구성요소를
 ---
 - 모델에 포함된 데이터의 시각화를 담당하는 사용자 인터페이스이다.
 
-모델에게 데이터를 받아와서 그릴 뿐, 모델이 가지고 있는 정보를 따로 저장해서는 안된다.
+데이터를 그릴 뿐, 모델이 가지고 있는 정보를 따로 저장해서는 안된다.
 
-모델에게 데이터를 받아와서 그릴 뿐, 인터페이스의 행동에 대한 결정은 모두 컨트롤러에게 맡긴다.
+데이터를 그릴 뿐, 인터페이스의 행동에 대한 결정은 모두 컨트롤러에게 맡긴다.
 
 
 ## Controller
@@ -99,13 +99,35 @@ MVC 패턴은 하나의 애플리케이션을 구성할 때, 그 구성요소를
 
 ### 실제로 MVC 패턴을 적용해서 간단한 앱을 만들어보자
 ---
-
+(추가 예정)
 
 ### MVC 패턴의 장점
 ---
 
+사용자가 보는 페이지, 데이터처리, 그리고 이 2가지를 중간에서 제어하는 컨트롤.
+
+이 3가지로 구성되는 하나의 애플리케이션을 만들면 서로 <b>분리</b>되어 각자 맡은 역할에만 집중을 할 수 있게 된다.
+
+각 요소 간에 **연결을 보다 느슨하게 구성**할 수가 있게 되기 때문에 복잡한 애플리케이션을 관리하기에 용이하다.
+
+따라서 다른 디자인 패턴처럼
+- **유지보수성**
+- **애플리케이션의 확장성**
+- **유연성**
+
+이 증가한다!
+
+
 ### MVC 패턴의 단점
 ---
+- **Massive ViewController (대규모 MVC 어플리케이션)**
+    - Controller가 무지하게 커지고 복잡해질 수 있다.
+    - 화면에 복잡한 화면과 데이터의 구성 필요한 구성이라면, Controller에 다수의 Model과 View가 복잡하게 연결되어 있는 상황이 생길 수 있다.
+
+
+이러한 mvc의 문제점을 보완한 여러 다양한!! 패턴 (MVP, MVVM, Flux, Redux ...)이 생겼다.
+
+<br>
 
 ## Reference
 ---
@@ -119,6 +141,14 @@ MVC 패턴은 하나의 애플리케이션을 구성할 때, 그 구성요소를
 <a href="https://plposer.tistory.com/33">https://plposer.tistory.com/33</a>
 
 <a href="https://www.tutorialspoint.com/mvc_framework/mvc_framework_introduction.htm">https://www.tutorialspoint.com/mvc_framework/mvc_framework_introduction.htm</a>
+
+<a href="https://medium.com/@jang.wangsu/%EB%94%94%EC%9E%90%EC%9D%B8%ED%8C%A8%ED%84%B4-mvc-%ED%8C%A8%ED%84%B4%EC%9D%B4%EB%9E%80-1d74fac6e256">https://medium.com/@jang.wangsu/%EB%94%94%EC%9E%90%EC%9D%B8%ED%8C%A8%ED%84%B4-mvc-%ED%8C%A8%ED%84%B4%EC%9D%B4%EB%9E%80-1d74fac6e256</a>
+
+<br>
+
+## 더 공부할 부분
+---
+MVP, MVVM
 
 <br>
 
