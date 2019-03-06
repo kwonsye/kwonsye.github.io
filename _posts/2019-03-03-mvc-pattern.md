@@ -31,33 +31,31 @@ MVC 패턴은 하나의 애플리케이션을 구성할 때, 그 구성요소를
 <br>
 먼저 전체적인 흐름을 정리한 다음에 Mode, View, Controller 각각을 설명할 것이다.
 
-<img src="/assets/images/190305/mvc.JPG" title="출처 : 안JAVA먹지">
+<img src="">
 
 **1.** user가 UI를 맡고 있는 View에서 화면에 표시된 내용을 변경하게 되면(ex Submit 버튼을 누른다.), Controller가 사용자의 행동을 받아서 사용자의 요청 명령에 응답한다.
 <br>
 
-**2.** Controller는 변경이 발생한 View에 해당하는 Model에게 어디가 바뀌었으니 데이터를 변경하라고 연락한다.
+**2.** Controller는 변경이 발생한 View에 해당하는 Model에게 어디가 바뀌었으니 데이터를 변경하라고 통지한다.
 
-**3.** Model의 데이터가 변경됐다면, Model은 관련된 View에게 데이터가 변경되었음을 알린다.
+**3.** Model의 데이터가 변경됐다면, Model은 데이터가 변경되었음을 Controller에게 알린다.
 
-**4.** Model의 변경통지를 받은 View는 변경된 데이터를 Model에게 직접 요청하고 그렇게 가져온 데이터로 화면을 다시 그린다.
+**4.** Model의 변경통지를 받은 Controller는 최종 UI로 출력될 View를 결정하고, View한테 화면을 다시 그리라고 알려준다.
 
-**5.** user는 새롭게 그려진 View를 보게 된다.
+**5.** Controller에게 통지받은 View는 화면을 다시 그리고 user는 새롭게 그려진 View를 보게 된다.
 
 <br>
 
 ## Model
 ---
-- 데이터를 가지고 있는 객체이며 모든 데이터와 상태에 대한 정보를 가지고 있다.
+- 데이터를 가지고 있는 객체이며 모든 데이터와 상태에 대한 정보와 데이터 처리 관련 로직을 가지고 있다.
 - View와 Controller에서 Model의 상태를 조작하거나 가져오기 위한 인터페이스를 제공한다.
 
-자신의 상태가 변경되면 관련된 옵저버들(View)에게 알려주긴 하지만, 
 기본적으로 View나 Controller에 대해서 관심이 없다.
 
 ## View
 ---
 - 모델에 포함된 데이터의 시각화를 담당하는 사용자 인터페이스이다.
-- 화면에 표시하기 위한 데이터나 상태를 직접 Model에 요청해서 가져온다.
 
 모델에게 데이터를 받아와서 그릴 뿐, 모델이 가지고 있는 정보를 따로 저장해서는 안된다.
 
@@ -71,11 +69,25 @@ MVC 패턴은 하나의 애플리케이션을 구성할 때, 그 구성요소를
 
 데이터와 사용자인터페이스 요소들을 잇는 다리역할을 한다.
 
+사용자의 인터렉션을 처리하고, 모델을 조작하며, 최종 UI로 출력될 뷰를 결정한다.
+
 <br>
+
+### MVC 개념을 이해하기 위한 간단한 코드를 작성해보자.
+---
+열 마디 말보다는 한 줄의 코드가 더 이해가 빠를 수도 있다! MVC 개념 이해를 위한 간단한 코드를 작성해보았다.
+
+
 
 ### 실제로 MVC 패턴을 적용해서 간단한 앱을 만들어보자
 ---
 
+
+### MVC 패턴의 장점
+---
+
+### MVC 패턴의 단점
+---
 
 ## Reference
 ---
@@ -87,6 +99,8 @@ MVC 패턴은 하나의 애플리케이션을 구성할 때, 그 구성요소를
 
 
 <a href="https://plposer.tistory.com/33">https://plposer.tistory.com/33</a>
+
+<a href="https://www.tutorialspoint.com/mvc_framework/mvc_framework_introduction.htm">https://www.tutorialspoint.com/mvc_framework/mvc_framework_introduction.htm</a>
 
 <br>
 
