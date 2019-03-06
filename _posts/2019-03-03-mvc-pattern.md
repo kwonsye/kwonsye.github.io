@@ -38,7 +38,7 @@ MVC 패턴은 하나의 애플리케이션을 구성할 때, 그 구성요소를
 <br>
 먼저 전체적인 흐름을 정리한 다음에 Mode, View, Controller 각각을 설명할 것이다.
 
-<img src="/assets/images/190305/mvc_2.JPG">
+<img src="/assets/images/190305/mvc_2.JPG" title="출처 :alex-jin.com">
 
 **1.** user가 UI를 맡고 있는 View에서 화면에 표시된 내용을 변경하게 되면(ex Submit 버튼을 누른다.), Controller가 사용자의 행동을 받아서 사용자의 요청 명령에 응답한다.
 <br>
