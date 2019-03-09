@@ -72,6 +72,9 @@ pip install --upgrade tensorflow
 2. `session.run(op)` 를 통해 그래프에 data(tensor)가 흐르게 해준다.
 3. 그 결과로 그래프의 변수들을 업데이트하거나 값을 반환한다.
 <br>
+1. 노드와 엣지로 그래프를 build한다.
+2. `session.run(op)` 를 통해 그래프에 data(tensor)가 흐르게 해준다.
+3. 그 결과로 그래프의 변수들을 업데이트하거나 값을 반환한다.
 
 ```
 import tensorflow as tf
