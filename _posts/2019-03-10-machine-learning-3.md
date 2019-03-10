@@ -38,7 +38,9 @@ $$\begin{pmatrix}x_1 & x_2 & x_3 \\\end{pmatrix} \begin{pmatrix}w_1 \\ w_2 \\ w_
 
 <img src="/assets/images/190310/metrix.JPG" title="출처 : 인프런_모두를 위한 딥러닝">
 
-따라서 `hypothesis`는 두 행렬의 곱인 **H(X) = XW**로 표현 할 수 있다! `X`는 입력 dataset 행렬, `W`는 우리가 찾아야하는 weight 값 행렬이다. 
+따라서 `hypothesis`는 두 행렬의 곱인 **H(X) = XW**로 표현 할 수 있다! 
+
+`X`는 입력 dataset 행렬, `W`는 우리가 찾아야하는 weight 값 행렬이다. 
 
 <br>
 
@@ -53,6 +55,41 @@ $$\begin{pmatrix}x_1 & x_2 & x_3 \\\end{pmatrix} \begin{pmatrix}w_1 \\ w_2 \\ w_
 
 ## tensorflow로 .csv 파일에서 데이터 읽어오기
 ---
+`.csv` 파일이란 데이터 값들이 `,`로 이어져 있는 텍스트 파일이다.
+
+메모장으로 `input_data.csv`를 만든 후 아래와 같이 입력하고 저장한다. -> 엑셀파일로 저장됨.
+```
+#EXAM1,EXAM2,EXAM3,FINAL
+73,80,75,152
+93,88,93,185
+89,91,90,180
+96,98,100,196
+73,66,70,142
+53,46,55,101
+```
+
+그리고 앞의 코드에서 `x_data`, `y_data` 로 넣어줬던 값 대신 아래와 같이 쓰면 된다!
+
+```
+# csv 파일 읽어오기 -> 파라미터로 파일경로를 넘긴다.
+csv_data = np.loadtxt('C:/Users/kwons/Desktop/input_data.csv', delimiter=',' , dtype= np.float)
+
+x_data = csv_data[:, 0:-1] # [행:열] 모든 행의 마지막 열을 제외한 모든 열을 가져옴
+y_data = csv_data[:, [-1]] # 모든 행의 마지막 열==label을 가져옴
+
+print(x_data.shape, x_data) # 잘 들어갔는지 확인!
+print(y_data.shape, y_data)
+
+... # 앞의 코드와 동일
+
+
+```
+<br>
+
+## .csv 파일이 여러 개라면? -> queue와 batch 사용하기
+---
+
+<script src="https://gist.github.com/kwonsye/d73479ff3361c12e338dc78b112a693d.js"></script>
 
 <br>
 
