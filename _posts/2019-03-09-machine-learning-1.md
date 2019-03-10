@@ -1,13 +1,14 @@
 ---
 layout: post
 comments: true
-title: "모두를 위한 딥러닝 기초 - (1)머신러닝의 개념과 용어"
+title: "모두를 위한 딥러닝 기초 - (1) 머신러닝의 개념과 용어"
 categories:
   - Study Note
 tags:
   - deep-learning
   - machine-learning
-  - linear-regression
+  - tesorflow
+  - shape
 ---
 
 ## Intro
@@ -65,17 +66,17 @@ dataflow graph가 뭐지?
 pip install --upgrade tensorflow
 ```
 
-## Tensorflow의 기본적인 operation
+<br>
 
+## Tensorflow의 기본적인 operation
+---
 - tensorflow mechanics 순서
 
 1. 노드와 엣지로 그래프를 build한다.
 2. `session.run(op)` 를 통해 그래프에 data(tensor)가 흐르게 해준다.
 3. 그 결과로 그래프의 변수들을 업데이트하거나 값을 반환한다.
+
 <br>
-1. 노드와 엣지로 그래프를 build한다.
-2. `session.run(op)` 를 통해 그래프에 data(tensor)가 흐르게 해준다.
-3. 그 결과로 그래프의 변수들을 업데이트하거나 값을 반환한다.
 
 ```
 import tensorflow as tf
@@ -94,6 +95,7 @@ print(session.run(node_add)) #7.0
 print(session.run(node_sub)) #1.0
 
 ```
+
 <br>
 
 - 런타임에 텐서 값들을 던져주고 싶을 때 = **tf.placeholder()**
