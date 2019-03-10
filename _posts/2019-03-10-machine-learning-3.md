@@ -24,9 +24,36 @@ tags:
     - H(x<sub>1</sub>, x<sub>2</sub>,x<sub>3</sub> ) = w<sub>1</sub>x<sub>1</sub> +  w<sub>2</sub>x<sub>2</sub> +  w<sub>3</sub>x<sub>3</sub> + b
 
 - **Cost Fuction**
-    - cost(W,b) = $$ \frac{1}{m} \sum_{i=1}^m (H(X_1^i, x_2^i, x_3^i)-y^i)^2 $$
+    - cost(W,b) = $$ \frac{1}{m} \sum_{i=1}^m (H(x_1^i, x_2^i, x_3^i)-y^i)^2 $$
 
 
-**행렬곱**을 이용하면 multi-variable 입력값을 쉽게 표현할 수 있다.
+**행렬곱**을 이용하면 multi-variable 입력 값을 쉽게 표현할 수 있다.
 
-$$\begin{pmatrix}x_1 & x_2 & x_3 \\\end{pmatrix} \begin{pmatrix}w_1 \\ w_2 \\ w_3 \\\end{pmatrix}$$
+위의 예제를 행렬곱으로 나타내면 아래와 같다.
+
+$$\begin{pmatrix}x_1 & x_2 & x_3 \\\end{pmatrix} \begin{pmatrix}w_1 \\ w_2 \\ w_3 \\\end{pmatrix} = \begin{pmatrix}x_1 w_1 & x_2 w_2 & x_3 w_3 \\\end{pmatrix} $$
+
+
+여러 개의 dataset이 주어지는 경우 아래 사진과 같이 행렬곱으로 쉽게 표현할 수 있다.
+
+<img src="/assets/images/190310/metrix.JPG" title="출처 : 인프런_모두를 위한 딥러닝">
+
+따라서 `hypothesis`는 두 행렬의 곱인 **H(X) = XW**로 표현 할 수 있다! `X`는 입력 dataset 행렬, `W`는 우리가 찾아야하는 weight 값 행렬이다. 
+
+<br>
+
+## multi-variable linear regression을 TensorFlow에서 구현하기
+---
+
+<script src="https://gist.github.com/kwonsye/47aa6ce5b87341dad3442b0bc561f322.js"></script>
+
+<br>
+
+<br>
+
+## tensorflow로 .csv 파일에서 데이터 읽어오기
+---
+
+<br>
+
+<br>
