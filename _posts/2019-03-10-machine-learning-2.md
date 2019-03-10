@@ -69,7 +69,13 @@ for step in range(2001):
 #마지막 결과
 # step : 2000 cost : 2.9568784e-05 W : [0.9936845] b : [0.01435669]
 ```
+<br>
 
+cost 최소화 알고리즘으로 `Gradient Descent Algorithm` 을 사용했다.
+
+- Gradient Descent 알고리즘
+  - cost function이 convex function의 모양일 경우에만 사용 가능
+  - cost function의 **최솟값 =** 경사를 따라 내려가다가 **경사의 기울기가 0인 곳 = 미분 값이 0인 지점**을 찾아가는 알고리즘
 <br>
 
 ## 런타임에 train-dataset 넘기고 생성된 모델로 test해보기
