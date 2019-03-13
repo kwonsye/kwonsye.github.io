@@ -36,7 +36,7 @@ $$\begin{pmatrix}x_1 & x_2 & x_3 \\\end{pmatrix} \begin{pmatrix}w_1 \\ w_2 \\ w_
 
 여러 개의 dataset이 주어지는 경우 아래 사진과 같이 행렬곱으로 쉽게 표현할 수 있다.
 
-<img src="/assets/images/190310/metrix.JPG" title="출처 : 인프런_모두를 위한 딥러닝">
+<img src="/assets/images/190310/matrix.JPG" title="출처 : 인프런_모두를 위한 딥러닝">
 
 따라서 `hypothesis`는 두 행렬의 곱인 **H(X) = XW**로 표현 할 수 있다! 
 
