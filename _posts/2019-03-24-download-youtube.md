@@ -45,8 +45,50 @@ tags:
 3. **다운받은 mp4 파일을 원하는 format_name을 가진 mp3 파일로 변환하기**
 4. **mp4 파일 지우기 (난 mp3만 필요하므로)**
 
-일단 첫 번째 문제부터 해결해야했다.
+<br>
+
+일단 첫 번째 문제부터 해결해보자.
 
 `python으로 엑셀파일 읽기` 검색 후 **`openpyxl`** 라는 라이브러리가 있다는 것을 알게되었다.
 
+<a href="">블로그</a>도 참고해서 엑셀 파일에 저장된 데이터들을 읽어왔다.
+
+현재 내 엑셀 파일 `데이터셋_soft.xlsx` 에는 아래와 같은 형식으로 **2개**의 col과 header포함 **151개**의 row들이 저장되어있다.
+
+| id | title   |
+|----|---------|
+| 1  | title_1 |
+| 2  | title_2 |
+| 3  | title_3 |
+
+```
+from openpyxl import load_workbook # pip install openpyxl
+
+# 해당 경로에서 엑셀 파일 가져오기
+load_wb = load_workbook("C:/Users/kwons/Desktop/데이터셋_soft.xlsx", data_only=True)
+# 시트 이름으로 불러오기
+load_ws = load_wb['Sheet1']
+
+print('-----헤더를 제외한 엑셀의 모든 행과 열 저장-----')
+all_values = []
+for row in load_ws['A2':'B151']:
+    row_value = []
+    for cell in row:
+        row_value.append(cell.value)
+    all_values.append(row_value)
+
+#test
+print(all_values)
+print(all_values[0][0], all_values[0][1]) # 각각 id->new_filename에 이용, title -> query에 이용
+print(len(all_values)) # 150
+
+```
+
+<br>
+
+헤더를 제외하기 위해서 셀 `A2`(=1) 부터 `B151`(=title_150)까지 `all_values`에 저장했다.
+
+`all_values`에는 `[[1, title_1], [2, title_2], [3, title_3], ... ,[150, title_150]]` 이렇게 이차원 배열이 저장된다.
+
+*참고 >> `A`와 `B`는 각각 1열, 2열이고 알파벳 뒤에 붙은 숫자는 행이다. 예를 들어 `A1`의 경우 1행1열인 `id`이며 `B3`의 경우 3행2열인 `title_2` 이다.
 
