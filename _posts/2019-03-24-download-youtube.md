@@ -312,6 +312,15 @@ while True:
 
 나중에 또 이런 기회가 있다면 남들보다 조금 더 생각해보고 고민해봐서 팀원들의 번거로움을 줄여주는데 기여하고 싶다.
 
+
+<br>
+
+<br>
+
+## 전체 코드
+---
+<script src="https://gist.github.com/kwonsye/c4c5985cfc63a972f951f148d0ba9461.js"></script>
+
 <br>
 
 <br>
