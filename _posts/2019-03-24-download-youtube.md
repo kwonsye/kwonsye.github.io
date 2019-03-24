@@ -1,7 +1,7 @@
 ---
 layout: post
 comments: true
-title: "python으로 Youtube 영상을 mp3파일로 저장하기"
+title: "python으로 노가다 자동화하기_수백개의 Youtube 영상을 mp3파일로 저장하는 방법"
 categories:
   - Study Note
 tags:
