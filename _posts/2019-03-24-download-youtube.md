@@ -180,3 +180,138 @@ import pytube # pip install pytube
 <br>
 
 ( 일단 들여쓰기가 전체적으로 어떻게 되는지 모르겠을 것이다. 포스팅 하단에 전체 코드를 올릴 것이므로 조금만 인내심을 가져주시길 바랍니다... )
+
+<br>
+
+<br>
+
+## .mp4를 원하는 format_name을 가진 .mp3로 변환하기
+---
+이제 다운받은 .mp4 파일을 .mp3로 변환해야한다.
+
+`moviepy` 라이브러리를 사용해서 mp3파일로 변환했다.
+
+```
+from moviepy.editor import * # pip install moviepy
+
+default_filename = videos[0].default_filename # 기존 mp4 파일이름
+
+# id format 변환 후 id_format.mp3 파일로 저장
+
+id = int(all_values[row][0]) # 엑셀파일의 id column값
+
+if int(id / 10) == 0 :
+    id_format = "00" + str(id) # 한자리 수 id 일 경우 00x로 변환
+elif int(id / 100) == 0 :
+    id_format = "0" + str(id) # 두자리 수 id 일 경우 0xx로 변환
+else:
+    id_format = str(id) # 세자리 수 id 일 경우 id 값 그대로
+
+new_filename = id_format +".mp3" # mp3로 변환할 파일 이름
+
+video = VideoFileClip(os.path.join(parent_dir,default_filename)) # mp3로 변환할 기존 mp4파일 경로
+
+video.audio.write_audiofile(os.path.join(parent_dir,new_filename)) # mp3로 변환 후 저장할 경로
+```
+<br>
+
+나는 데이터셋 mp3 파일의 이름 포맷을 **title의 id 값**으로 하기로 정했기 때문에 이를 자동화하는 코드도 작성해주었다.
+
+예를 들어 `title_1` 동영상 mp3의 경우 `001.mp3`로, `title_15`의 경우 `015.mp3`로 저장하기로 했다.
+
+<br>
+
+<br>
+
+## 기존 .mp4 파일 지우기
+---
+이제 거의 다 했다..
+
+현재 파일들이 저장된 디렉토리를 보면 `.mp4`와 `.mp3`파일이 같이 저장되어 있다.
+
+나는 데이터셋으로 mp3 파일만 필요하기 때문에 mp4파일을 지우는 것까지 자동화 하고 싶었다.
+
+코드는 아래와 같다!
+
+<br>
+
+```
+import os
+
+video.close() # process를 끝내야 mp4파일을 지울 수 있다.
+
+if os.path.isfile(parent_dir + "/" + default_filename):
+    os.remove(parent_dir + "/" + default_filename) # 기존 mp4 파일 지우기
+```
+
+<br>
+
+해당 mp4파일이 존재하면 `os.remove()`로 그 파일을 지워주었다. 이때 `video.close()`를 안해주면 process가 끝나지 않아서 파일을 지우지 못한다는 ERROR가 난다.
+
+<br>
+
+<br>
+
+## 일정 시간이 넘어가는 동영상은 제외하기
+---
+다 끝난 줄 알았는데...좀 더 보완할 곳이 생겼다.
+
+내가 받아야 할 음성파일은 약 3분~7분 사이의 동영상이었다. 
+
+하지만 현재는 무조건 검색결과의 첫 번째 동영상만 다운받으므로 동영상 재생 시간까지 체크해주는 과정이 필요했다.
+
+만약 7분을 넘어가는 running time을 가지고 있다면 7분이 넘지 않는 그 다음 순서의 동영상을 대신 가져와야했다.
+
+따라서 아래의 코드를 추가!
+
+```
+# 재생 시간이 7분 미만인 동영상을 찾아서 가져온다.
+video_index=0
+while True:
+    running_time = soup.find_all(class_='video-time')[video_index].text # 동영상 재생시간 예시) 3:02
+    splitted_time = running_time.split(":")
+
+    if len(splitted_time) == 2: # 재생시간이 분, 초
+        if int(splitted_time[0]) >= 7: # 재생시간이 7분 이상이면 다음 순서의 동영상을 가져온다.
+            video_index += 1
+            continue
+        else :
+            watch_url = soup.find_all(class_='yt-uix-sessionlink spf-link')[video_index]['href']
+            break
+
+    elif len(splitted_time) == 1 or len(splitted_time) == 3: # 재생시간이 초 또는 시,분,초
+        video_index += 1 # 다음 순서의 동영상을 가져온다
+        continue
+
+```
+
+<br>
+
+검색결과의 첫 동영상부터 `video-time`을 **크롤링**해와서 7분이 넘어가는지 안넘어가는지 확인하고, 7분 미만의 동영상을 찾을 때 까지 **무한루프**를 돌렸다.
+
+<br>
+
+<br>
+
+## 이제 진짜 끝!!
+---
+1. **엑셀 파일에 적어놓은 수 백개의 동영상 title 읽어오기**
+2. **가져온 title에 해당하는 유튜브 동영상을 mp4파일로  다운받기**
+3. **다운받은 mp4 파일을 원하는 format_name을 가진 mp3 파일로 변환하기**
+4. **mp4 파일 지우기**
+
++**일정시간 미만의 동영상만 골라서 다운받기**
+
+원래는 내가 일일이 수동으로 해야했을 위의 Task들을 모두 완벽(?)하게 **`자동화`** 하는 코드를 작성했고,
+
+나와 똑같은 과제를 부여받았던 팀원들에게 재빠르게 뿌렸다!
+
+팀원들이 고마워하는 걸 보고 아주아주 뿌듯했다 ㅎㅎ
+
+팀원들의 시간을 세이브 해주었다는 생각에 팀에 기여했다는 뿌듯함이 뿜뿜! 기분 최고다!
+
+나중에 또 이런 기회가 있다면 남들보다 조금 더 생각해보고 고민해봐서 팀원들의 번거로움을 줄여주는데 기여하고 싶다.
+
+<br>
+
+<br>
