@@ -2,6 +2,16 @@
 //
 // Each post is wrapped in `.post` and is used on default and post layouts. Each
 // page is wrapped in `.page` and is only used on the page layout.
+a :not(.page-title, .post-tags, .post-title, .posts-list li) {
+  color: black;
+  text-decoration: underline wavy rgb(252, 196, 11);
+  &:hover,
+  &:focus {
+    text-decoration:none;
+    color: white;
+    background-color:orange; 
+  }
+}
 
 article + *, .post-body ~ section {
   padding-top: $section-spacing;
@@ -44,16 +54,6 @@ h2.post-title, h2.page-title {
   color: $body-muted;
 }
 
-a {
-  color: black;
-  text-decoration: underline wavy rgb(252, 196, 11);
-  &:hover,
-  &:focus {
-    text-decoration:none;
-    color: white;
-    background-color:orange; 
-  }
-}
 
 .post-tags a {
   font-size: 0.8em;
