@@ -70,7 +70,7 @@ $$\begin{pmatrix}x_1 & x_2 & x_3 \\\end{pmatrix} \begin{pmatrix}w_1 \\ w_2 \\ w_
 
 그리고 앞의 코드에서 `x_data`, `y_data` 로 넣어줬던 값 대신 아래와 같이 쓰면 된다!
 
-```
+```python
 # csv 파일 읽어오기 -> 파라미터로 파일경로를 넘긴다.
 csv_data = np.loadtxt('C:/Users/kwons/Desktop/input_data.csv', delimiter=',' , dtype= np.float)
 

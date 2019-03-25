@@ -49,7 +49,7 @@ tags:
 `const` 는 상수를 선언하는 키워드이다. 따라서 값의 재할당이 불가능하고, 선언과 동시에 값을 할당해주어야 한다. (=초기화 해 주어야 한다.)
 - 단 배열 or 객체일 경우 값의 변경이 가능하다
 
-```
+```javascript
 const a = 'a'
 const a = 'b' //error
 a = 'b' //error
@@ -64,7 +64,7 @@ const object = {a:1, b:2, c:3}
 object.a = 4 //가능 object는 {a:4, b:2, c:3}으로 변경됨
 ```
 `var` 과 `let`은 변수를 선언하는 키워드이다. 따라서 값의 재할당이 가능하다. 물론 초기화를 안해줘도 된다.
-```
+```javascript
 var a = 'a'
 let b = 'b'
 
@@ -80,7 +80,7 @@ c = 'c' //no error
 ## const, let VS var
 ---
 `const`과 `let` 은 블록 스코프를 갖기 때문에 블록 `{}` 안에서만 유효한 사용 범위를 가진다.
-```
+```javascript
 const a = 'a'
 let b = 'b'
 {
@@ -98,7 +98,7 @@ console.log(b) //'b'
 console.log(c) //error -> c는 블록 안에서만 살아있다.
 ```
 반면 `var`는 함수 스코프를 갖기 때문에 블록이고 뭐고 다 덮어 씌워진다.
-```
+```javascript
 var a = 'a'
 {
     var a = 'b'
@@ -119,7 +119,7 @@ console.log(b) //'c'
 ---
 
 `let`은 재선언하면 에러를 내준다. 반면 `var`은 재선언을 아무리 해도 에러가 나지 않는다. 따라서 예측하기 어려운 코드를 만든다..
-```
+```javascript
 var a = 'a'
 var a = 'b' //no error
 console.log(a) //'b'
@@ -136,7 +136,7 @@ let b = 'd' //error
 호이스팅이란 변수 또는 함수의 <b>선언</b>이 코드의 가장 상위로 끌어올려지는 것을 의미한다.
 
 따라서 다음과 같은 코드는 에러가 나지 않는다.
-```
+```javascript
 //var의 변수 호이스팅
 console.log(a) //undefined 선언만 끌어올려진다.
 var a = 'a'
@@ -149,14 +149,14 @@ console.log(b) //undefined
 ```
 - 참고 : 함수 호이스팅
     - 함수가 함수 선언식 (function declaration) 으로 선언되면 스코프의 최상단으로 호이스팅된다.
-    ```
+    ```javascript
     sayHello() //'hello'
     function sayHello () {
         console.log('hello')
     }
     ```
     - 함수가 함수 표현식 (function expression) 으로 선언되면 호이스팅되지 않는다.
-    ```
+    ```javascript
     sayHello() //error
     const sayHello = function () {
         console.log('hello')
@@ -166,7 +166,7 @@ console.log(b) //undefined
 <br>
 
 반면 `let`은 호이스팅되지 않아 조금 더 예측 가능한 코드를 작성할 수 있다.
-```
+```javascript
 console.log(a) //error
 let a = 'a'
 console.log(a) //'a'

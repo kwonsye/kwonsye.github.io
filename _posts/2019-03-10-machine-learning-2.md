@@ -42,7 +42,7 @@ Cost(Loss) Function : cost(W,b) = $$ \frac{1}{m} \sum_{i=1}^m (H(X^i)-y^i)^2 $$
 
 ## Tensorflow로 간단한 Linear Regression 구현
 ---
-```
+```python
 import tensorflow as tf
 
 x_train = [1,2,3] # 데이터
@@ -84,7 +84,7 @@ cost 최소화 알고리즘으로 `Gradient Descent Algorithm` 을 사용했다.
 ---
 
 런타임에 넘겨야하므로 **placeholder**사용
-```
+```python
 import tensorflow as tf
 
 x_train = tf.placeholder(tf.float32, shape=[None]) # shape: rank=1,

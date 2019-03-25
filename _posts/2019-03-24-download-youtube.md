@@ -70,7 +70,7 @@ tags:
 
 <br>
 
-```
+```python
 from openpyxl import load_workbook # pip install openpyxl
 
 # 해당 경로에서 엑셀 파일 가져오기
@@ -133,7 +133,7 @@ print(len(all_values)) # 150
 
 <br>
 
-```
+```python
 import requests # pip install requests
 from bs4 import BeautifulSoup # pip install bs4
 
@@ -159,7 +159,7 @@ for row in range(len(all_values)): # 0~149 까지 엑셀파일의 모든 노래 
 
 <br>
 
-```
+```python
 import pytube # pip install pytube
  
 ...
@@ -191,7 +191,7 @@ import pytube # pip install pytube
 
 `moviepy` 라이브러리를 사용해서 mp3파일로 변환했다.
 
-```
+```python
 from moviepy.editor import * # pip install moviepy
 
 default_filename = videos[0].default_filename # 기존 mp4 파일이름
@@ -235,7 +235,7 @@ video.audio.write_audiofile(os.path.join(parent_dir,new_filename)) # mp3로 변�
 
 <br>
 
-```
+```python
 import os
 
 video.close() # process를 끝내야 mp4파일을 지울 수 있다.
@@ -264,7 +264,7 @@ if os.path.isfile(parent_dir + "/" + default_filename):
 
 따라서 아래의 코드를 추가!
 
-```
+```python
 # 재생 시간이 7분 미만인 동영상을 찾아서 가져온다.
 video_index=0
 while True:

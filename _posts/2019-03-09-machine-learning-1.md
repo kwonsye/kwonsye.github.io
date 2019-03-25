@@ -78,7 +78,7 @@ pip install --upgrade tensorflow
 
 <br>
 
-```
+```python
 import tensorflow as tf
 
 node1 = tf.constant(3.0)
@@ -100,7 +100,7 @@ print(session.run(node_sub)) #1.0
 
 - 런타임에 텐서 값들을 던져주고 싶을 때 = **tf.placeholder()**
 
-```
+```python
 import tensorflow as tf
 
 node1 = tf.placeholder(tf.float32)
@@ -125,7 +125,7 @@ rank와 shape을 어떻게 계산하는지 알아보자!
 - **rank = 차원 계산하는 방법**
     - 처음부터 원소data 가 나올 때까지 `[`가 몇 개 나오는지 센다.
 
-```
+```python
 [1,2,3,3,2] # rank 1
 [[4,6],[2,1]] # rank 2
 [[[[[1,2,3]]]]] # rank 5
@@ -140,7 +140,7 @@ rank와 shape을 어떻게 계산하는지 알아보자!
     - 그 한 묶음이 가장 가까운 외부 `[]` 안에 몇 개 들어가는지 세서 왼쪽에 써준다.
     - 또 그 한 묶음이 가장 가까운 외부 `[]` 안에 몇 개 들어가는지 세서 왼쪽에 써준다.
 
-```
+```python
 [1,2,7] # shape [3]
 [[1,2,3],[5,6,7]] # shape [2,3]
 [[[1,3,4]],[[8,6,9]]] # shape [2,1,3]
