@@ -33,16 +33,14 @@ main, article, section { display: block; }
 
 // No `:visited` state is required by default (browsers will use `a`)
 a {
-  //color: $link-color;
-  color: black;
-  text-decoration: underline wavy rgb(252, 196, 11);
-
+  color: $link-color;
+  text-decoration: none;
+  //text-decoration: underline wavy rgb(252, 196, 11);
+  
   // `:focus` is linked to `:hover` for basic accessibility
   &:hover,
   &:focus {
-    text-decoration:none;
-    color: white;
-    background-color:orange; 
+    text-decoration:underline;
   }
 
   strong {
