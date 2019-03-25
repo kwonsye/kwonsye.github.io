@@ -44,6 +44,17 @@ h2.post-title, h2.page-title {
   color: $body-muted;
 }
 
+a {
+  color: black;
+  text-decoration: underline wavy rgb(252, 196, 11);
+  &:hover,
+  &:focus {
+    text-decoration:none;
+    color: white;
+    background-color:orange; 
+  }
+}
+
 .post-tags a {
   font-size: 0.8em;
   margin-right: 0.5rem;
@@ -103,13 +114,3 @@ button.disqus-load {
   background: rgb(131, 73, 224);
 }
 
-a {
-    color: black;
-    text-decoration: underline wavy rgb(252, 196, 11);
-    &:hover,
-    &:focus {
-      text-decoration:none;
-      color: white;
-      background-color:orange; 
-    }
-}

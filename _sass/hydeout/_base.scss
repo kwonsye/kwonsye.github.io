@@ -35,7 +35,6 @@ main, article, section { display: block; }
 a {
   color: $link-color;
   text-decoration: none;
-  //text-decoration: underline wavy rgb(252, 196, 11);
   
   // `:focus` is linked to `:hover` for basic accessibility
   &:hover,
