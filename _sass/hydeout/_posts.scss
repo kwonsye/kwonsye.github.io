@@ -24,10 +24,49 @@ article + *, .post-body ~ section {
 
 // Blog post or page title
 .page-title,
-.post-title,
+.post-title{
+  color: $heading-color;
+  background-color: none;
+}
+
 .post-title a {
   color: $heading-color;
+  display: block;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-transition: color 1000ms;
+  transition: color 1000ms;
+  background: none;
+  
+  &:hover{
+    color: white
+  }
+
+  &:before{
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgb(131, 73, 224);
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
+    -webkit-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition: 300ms ease-out;
+    transition: 300ms ease-out;
+  }
+  &:hover:before{
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+  }
 }
+
+
 .page-title,
 .post-title {
   margin-top: 0;
@@ -120,7 +159,7 @@ button.disqus-load {
     background-color:orange;
   }
 }
-//highlight
+//custom highlight
 .hl{
   color: white;
   background-color: rgba(131, 73, 224, 0.5);
