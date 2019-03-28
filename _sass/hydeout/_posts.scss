@@ -46,6 +46,7 @@ article + *, .post-body ~ section {
   &:before {
     content: "";
     position: absolute;
+    border-radius: 10px;
     z-index: -1;
     top: 0;
     left: 0;
@@ -109,20 +110,26 @@ h2.post-title, h2.page-title {
 .posts-list {
   padding-left: 0;
   list-style: none;
-
+  
   h3 {
     margin-top: 0;
   }
 
   li {
+    //custom
+    a{
+      color: $heading-color;
+    }
+    
     small {
       font-size: 75%;
       color: #999;
       white-space: nowrap;
     }
 
+    //custom
     a:hover {
-      color: $link-color;
+      color: rgb(131, 73, 224);
       text-decoration: none;
 
       small {
@@ -148,6 +155,7 @@ button.disqus-load {
   background: rgb(131, 73, 224);
 }
 
+//custom 링크 css
 .post-body a :not(.post-categories),
 .post-body p a{
   color: black;

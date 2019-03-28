@@ -3,6 +3,6 @@ layout: category
 title: Study Note
 ---
 
-* 공부한 내용을 정리하는 곳 입니다.
+> 삽질하면서 배운 내용을 기록하는 곳 입니다.
 
-Posts get listed below here.
+

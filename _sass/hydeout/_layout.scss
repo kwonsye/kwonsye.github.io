@@ -66,6 +66,17 @@ body {
   background: $body-bg;
   color: $body-color;
   padding: $section-spacing;
+  a {
+    color: black;
+    text-decoration: underline wavy rgb(252, 196, 11);
+    background-color: none;
+    &:hover,
+    &:focus {
+      text-decoration:none;
+      color: white;
+      background-color:orange;
+    } 
+  }
 }
 
 
