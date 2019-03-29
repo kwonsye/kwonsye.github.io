@@ -46,7 +46,6 @@ article + *, .post-body ~ section {
   &:before {
     content: "";
     position: absolute;
-    border-radius: 10px;
     z-index: -1;
     top: 0;
     left: 0;
@@ -116,10 +115,6 @@ h2.post-title, h2.page-title {
   }
 
   li {
-    //custom
-    a{
-      color: $heading-color;
-    }
     
     small {
       font-size: 75%;
@@ -129,7 +124,7 @@ h2.post-title, h2.page-title {
 
     //custom
     a:hover {
-      color: rgb(131, 73, 224);
+      //color: rgb(131, 73, 224);
       text-decoration: none;
 
       small {

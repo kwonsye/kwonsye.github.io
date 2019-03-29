@@ -1,6 +1,6 @@
 ---
 layout: category
-title: Computer Science_Fast Campus
+title: Computer Science[Fast Campus]
 ---
 >Supported By <a style="background-color : #e16262 ;color: white" href="https://www.fastcampus.co.kr/">Fast-Campus</a><br><br> 패스트캠퍼스 **온라인 서포터즈 1기** 활동을 하면서 <span style="background-color: rgba(131, 73, 224, 0.5); color:white;">컴퓨터 공학 올인원 패키지</span> 를 수강하고 내 맘대로 정리하는 공간입니다.
 
