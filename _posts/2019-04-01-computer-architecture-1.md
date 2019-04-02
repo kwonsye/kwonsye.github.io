@@ -95,21 +95,22 @@ tags:
 
 <br>
 
-<span style="color:#2d6594; font-weight: bold;text-align: justify; ">패스트캠퍼스 컴퓨터공학 올인원 패키지로 개발자의 꿈에 날개를 달고 싶다면? 또는 주인장을 응원하고 싶다면? 하단의 이미지를 클릭해주세요!</span>
-<br>
-
-<img src="/assets/images/190401/link.JPG" onclick="javascript:newin=window.open('about:blank'); newin.location.href='https://bit.ly/2TRCh5e';" style="cursor:pointer;">
-
-
 ## Reference
 ---
-[책] <a href="https://book.naver.com/bookdb/book_detail.nhn?bid=4392911">운영체제와 정보 기술의 원리_반효경 지음</a> (이 책 좋습니다!)
+[책] <a href="https://book.naver.com/bookdb/book_detail.nhn?bid=4392911">운영체제와 정보 기술의 원리_반효경 지음</a> (**이 책 좋습니다!**)
 
 <br>
 
 ## 더 공부할 것 및 포스팅에 추가할 부분
 ---
 튜링머신의 정지문제
+
+<br>
+
+<span style="color:#2d6594; font-weight: bold;text-align: justify; ">패스트캠퍼스 컴퓨터공학 올인원 패키지로 개발자의 꿈에 날개를 달고 싶다면? 또는 주인장을 응원하고 싶다면? 하단의 이미지를 클릭해주세요!</span>
+<br>
+
+<img src="/assets/images/190401/link.JPG" onclick="javascript:newin=window.open('about:blank'); newin.location.href='https://bit.ly/2TRCh5e';" style="cursor:pointer;">
 
 <br>
 
