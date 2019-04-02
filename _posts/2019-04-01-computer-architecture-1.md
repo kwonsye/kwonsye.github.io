@@ -27,9 +27,7 @@ tags:
 
 나에게 현재 중요한게 무엇인지 알고(흑흑 PR언제 해보지ㅜㅜ) 짧게 꾸준히 포스팅하려고 한다. 포스팅하는게 목적이 아닌 **단단한 개발자** 가 되는 것이, 그리고 궁금한 것이 있어서 이 포스팅을 클릭했을 사람들과 내가 공부한 것을 공유하고 조금이라도 도움을 주기 위한 목적임을 잊지말자!
 
-<span style="background-color : #e16262; color : white;">컴퓨터공학 올인원 패키지</span> 이제부터 시작!
-
-<br>
+<span style="background-color : #e16262; color : white;" onclick="location.href='https://bit.ly/2TRCh5e'">컴퓨터공학 올인원 패키지</span> 이제부터 시작!
 
 <br>
 
@@ -97,9 +95,15 @@ tags:
 
 <br>
 
+<span style="color:#2d6594; font-weight: bold;text-align: justify; ">패스트캠퍼스 컴퓨터공학 올인원 패키지로 개발자의 꿈에 날개를 달고 싶다면? 또는 주인장을 응원하고 싶다면? 하단의 이미지를 클릭해주세요!</span>
+<br>
+
+<img src="/assets/images/190401/link.JPG" onclick="javascript:newin=window.open('about:blank'); newin.location.href='https://bit.ly/2TRCh5e';" style="cursor:pointer;">
+
+
 ## Reference
 ---
-[책] 운영체제와 정보 기술의 원리_반효경 지음 (이 책 좋습니다!)
+[책] <a href="https://book.naver.com/bookdb/book_detail.nhn?bid=4392911">운영체제와 정보 기술의 원리_반효경 지음</a> (이 책 좋습니다!)
 
 <br>
 
