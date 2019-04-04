@@ -27,7 +27,7 @@ tags:
 
 나에게 현재 중요한게 무엇인지 알고(흑흑 PR언제 해보지ㅜㅜ) 짧게 꾸준히 포스팅하려고 한다. 포스팅하는게 목적이 아닌 **단단한 개발자** 가 되는 것이, 그리고 궁금한 것이 있어서 이 포스팅을 클릭했을 사람들과 내가 공부한 것을 공유하고 조금이라도 도움을 주기 위한 목적임을 잊지말자!
 
-<span style="background-color : #e16262; color : white;" onclick="location.href='https://bit.ly/2TRCh5e'">컴퓨터공학 올인원 패키지</span> 이제부터 시작!
+<span style="background-color : #e16262; color : white; cursor:pointer" onclick="location.href='https://bit.ly/2TRCh5e'">컴퓨터공학 올인원 패키지</span> 이제부터 시작!
 
 <br>
 
@@ -135,9 +135,9 @@ tags:
 
 <br>
 
-## 더 공부할 것 및 포스팅에 추가할 부분
+## 더 공부할 것 및 추가할 부분
 ---
-튜링머신의 정지문제
+<s>튜링머신의 정지문제</s>
 
 <br>
 
