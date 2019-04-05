@@ -2,16 +2,7 @@
 //
 // Each post is wrapped in `.post` and is used on default and post layouts. Each
 // page is wrapped in `.page` and is only used on the page layout.
-.link {
-  color: black;
-  text-decoration: underline wavy rgb(252, 196, 11);
-  &:hover,
-  &:focus {
-    text-decoration:none;
-    color: white;
-    background-color:orange; 
-  }
-}
+
 
 article + *, .post-body ~ section {
   padding-top: $section-spacing;
@@ -124,3 +115,20 @@ button.disqus-load {
   background: rgb(131, 73, 224);
 }
 
+.post-body a{
+  color: black;
+  text-decoration: underline wavy rgb(252, 196, 11);
+  background-color: none;
+  transition: background-color 0.7s ease-in-out;
+  &:hover,
+  &:focus {
+    text-decoration:none;
+    color: white;
+    background-color:orange;
+  }
+}
+//highlight
+.hl{
+  color: white;
+  background-color: rgba(131, 73, 224, 0.5)
+}
