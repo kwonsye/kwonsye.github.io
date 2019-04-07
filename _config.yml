@@ -5,7 +5,8 @@ highlighter:      rouge
 # Setup
 title:            복세냥살
 #tagline:          'A Jekyll theme'
-description:      '복잡한 세상 고양이처럼 나답게 살자'
+description:      '복잡한 세상 
+                   고양이처럼 나답고 단순하게 살자'
 url:              https://kwonsye.github.io
 baseurl:          
                   # the optional subpath of your site, e.g. "/blog"
