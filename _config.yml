@@ -3,9 +3,9 @@ markdown:         kramdown
 highlighter:      rouge
 
 # Setup
-title:            Memory
+title:            복세냥살
 #tagline:          'A Jekyll theme'
-description:      '공부한 것을 정리하기 위한 블로그입니다.'
+description:      '복잡한 세상 고양이처럼 나답게 살자'
 url:              https://kwonsye.github.io
 baseurl:          
                   # the optional subpath of your site, e.g. "/blog"
