@@ -3,7 +3,7 @@ layout: post
 comments: true
 title: "[컴퓨터공학 #1]컴퓨터란?_패스트캠퍼스 올인원패키지"
 categories:
-  - Computer Science[Fast Campus]
+  - Computer Science
 tags:
     - 패스트캠퍼스
     - 올인원패키지
