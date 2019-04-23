@@ -108,7 +108,7 @@ button.disqus-load {
   background: rgb(131, 73, 224);
 }
 
-.post-body a,
+.post-body a :not(.post-categories),
 .post-body p a{
   color: black;
   text-decoration: underline wavy rgb(252, 196, 11);
@@ -121,7 +121,7 @@ button.disqus-load {
   }
 }
 //highlight
-span .hl{
+.hl{
   color: white;
   background-color: rgba(131, 73, 224, 0.5);
 }
