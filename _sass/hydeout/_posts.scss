@@ -27,13 +27,6 @@ article + *, .post-body ~ section {
 .post-title,
 .post-title a {
   color: $heading-color;
-  text-decoration: none;
-  &:hover,
-  &:focus {
-    text-decoration:underline;
-    color: $heading-color;
-    background-color:none; 
-  }
 }
 .page-title,
 .post-title {
@@ -91,7 +84,7 @@ h2.post-title, h2.page-title {
     a:hover {
       color: $link-color;
       text-decoration: none;
-      background-color:none; 
+
       small {
         color: inherit;
       }
@@ -115,11 +108,11 @@ button.disqus-load {
   background: rgb(131, 73, 224);
 }
 
-.post-body a{
+.post-body a,
+.post-body p a{
   color: black;
   text-decoration: underline wavy rgb(252, 196, 11);
   background-color: none;
-  transition: background-color 0.7s ease-in-out;
   &:hover,
   &:focus {
     text-decoration:none;
@@ -128,7 +121,7 @@ button.disqus-load {
   }
 }
 //highlight
-.hl{
+span .hl{
   color: white;
-  background-color: rgba(131, 73, 224, 0.5)
+  background-color: rgba(131, 73, 224, 0.5);
 }
