@@ -3,7 +3,7 @@ layout: post
 comments: true
 title: "MarkDown 이용해서 깃블로그 포스팅하기"
 categories:
-  - Study Note
+  - Develop
 exerpt: "MarkDown 문법 정리"
 tags:
   - markdown

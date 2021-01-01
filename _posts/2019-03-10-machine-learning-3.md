@@ -3,7 +3,7 @@ layout: post
 comments: true
 title: "모두를 위한 딥러닝 기초 - (3) multi-variable (feature)의 Linear Regression"
 categories:
-  - Study Note
+  - Develop
 tags:
   - deep-learning
   - machine-learning

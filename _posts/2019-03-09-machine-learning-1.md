@@ -3,7 +3,7 @@ layout: post
 comments: true
 title: "모두를 위한 딥러닝 기초 - (1) 머신러닝의 개념과 용어"
 categories:
-  - Study Note
+  - Develop
 tags:
   - deep-learning
   - machine-learning

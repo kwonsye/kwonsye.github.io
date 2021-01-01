@@ -3,7 +3,7 @@ layout: post
 comments: true
 title: "IT Keywords"
 categories:
-  - Study Note
+  - Develop
 tags:
   - it-keywords
 ---
