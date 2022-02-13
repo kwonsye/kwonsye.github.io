@@ -3,7 +3,7 @@ layout: post
 comments: true
 title: "모두를 위한 딥러닝 기초 - (2) Linear Regression의 개념"
 categories:
-  - Study Note
+  - Develop
 tags:
   - deep-learning
   - machine-learning

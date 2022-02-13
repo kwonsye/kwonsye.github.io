@@ -3,7 +3,7 @@ layout: post
 comments: true
 title: "MVC 패턴 이해하기"
 categories:
-  - Study Note
+  - Develop
 tags:
   - MVC
   - MVT

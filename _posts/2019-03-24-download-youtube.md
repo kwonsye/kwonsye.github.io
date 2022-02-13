@@ -3,7 +3,7 @@ layout: post
 comments: true
 title: "python으로 노가다 자동화하기_수 백개의 Youtube 영상을 손 안대고 mp3파일로 저장하는 방법"
 categories:
-  - Study Note
+  - Develop
 tags:
     - python
     - youtube

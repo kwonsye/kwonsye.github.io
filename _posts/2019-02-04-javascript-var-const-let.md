@@ -3,7 +3,7 @@ layout: post
 comments: true
 title: "JavaScript const,var,let 비교"
 categories:
-  - Study Note
+  - Develop
 tags:
   - javascript
   - cont
